@@ -17,8 +17,7 @@ createConnection().then(async connection => {
     try {
       const Barrios = await connection.getRepository(Barrio)
         .createQueryBuilder("barrios")
-        .leftJoinAndSelect("barrios.residentes", "persona")
-        .where("persona.pidioComida = :pidio", { pidio: true })
+        .leftJoinAndSelect("barrios.residentes", "persona", "persona.pidioComida = :pidio", { pidio: true })
         .getMany();
 
       const report = Barrios.map(Barrio => ({
