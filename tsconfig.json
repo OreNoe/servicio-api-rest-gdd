@@ -11,6 +11,9 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/scripts/seeder.ts"],
+    "src/seeder.ts",
+    "src/swagger.ts",
+    "src/routes.ts",
+    "src/app.ts"],
   "exclude": ["node_modules"]
 }

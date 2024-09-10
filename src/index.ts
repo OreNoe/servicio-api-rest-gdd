@@ -3,11 +3,15 @@ import { createConnection } from "typeorm";
 import express from "express";
 import { Barrio } from "./entity/Barrio";
 import { Persona } from "./entity/Persona";
+const swaggerDocument = require('./swagger_output.json');
+const swaggerUi = require('swagger-ui-express');
+
+const app = express();
+app.use(express.json());
+
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 createConnection().then(async connection => {
-  const app = express();
-  app.use(express.json());
-
   app.listen(3000, () => {
     console.log("Server started on http://localhost:3000");
   });

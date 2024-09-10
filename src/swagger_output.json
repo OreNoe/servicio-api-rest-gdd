@@ -1,0 +1,54 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API de Comedores",
+    "description": "API de Comedores\n\n### Instalación y Ejecución\n\n#### Requisitos Previos:\n- Node.js\n- npm (gestor de paquetes de Node.js)\n\n#### Instalación:\n1. Clona el repositorio:\n   ```bash\n   git clone https://github.com/OreNoe/servicio-api-rest-gdd.git\n   ```\n2. Navega al directorio del proyecto:\n    ```bash\n    cd servicio-api-rest-gdd\n    ```\n3. Instala las dependencias:\n    ```bash\n    npm install express typeorm sqlite3 swagger-autogen swagger-ui-express typescript ts-node @types/node @types/express @types/swagger-ui-express @types/swagger-autogen \n    ```\n\n#### Ejecución:\n1. Para ejecutar el servidor de desarrollo:\n   ```bash\n   npm start\n   ```\n2. El servidor estará corriendo en `http://localhost:3000`.\n",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/reporte": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/barrios": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/personas": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}
